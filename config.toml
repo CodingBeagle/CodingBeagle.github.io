@@ -1,0 +1,9 @@
+baseURL = "https://codingbeagle.github.io/"
+languageCode = "en-us"
+title = "CodingBeagle"
+
+# By default, Hugo will automatically create Taxonomies.
+# I'm not sure what it is yet, but it gave me generation warnings,
+# And I don't like to have something done which I don't fully grasp.
+# Therefore, it has been disabled for now.
+disableKinds = ["taxonomy", "taxonomyTerm"]
