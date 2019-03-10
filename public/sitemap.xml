@@ -7,4 +7,17 @@
     <priority>0</priority>
   </url>
   
+  <url>
+    <loc>https://codingbeagle.github.io/projects/project-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://codingbeagle.github.io/projects/project-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://codingbeagle.github.io/projects/</loc>
+    <priority>0</priority>
+  </url>
+  
 </urlset>

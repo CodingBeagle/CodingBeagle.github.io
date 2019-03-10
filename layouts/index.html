@@ -83,8 +83,19 @@
             </div>
         </div>
 
-        {{ range first 10 .Site.Pages }}
-            <p>bla</p>
+        <!-- 
+            Hugo uses the "Go" libraries for templating.
+            Every template gets passed a data object, the "Page" object.
+
+            The .Pages variable includes all pages of the website.
+            This includes: content, sections, taxonomies.
+
+            For the Home Template, .Pages will be the same as
+            .Site.RegularPages
+
+            .Site.RegularPages is equivalent to "where .Site.Pages "kind" "page"
+        -->
+        {{ range where .Pages "Section" "projects" }}
             {{ .Title }}
         {{ end }}
 
