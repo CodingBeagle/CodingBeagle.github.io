@@ -95,33 +95,49 @@
 
             .Site.RegularPages is equivalent to "where .Site.Pages "kind" "page"
         -->
-        {{ range where .Pages "Section" "projects" }}
-            {{ .Title }}
+        {{ $projectPages := where .Pages "Section" "projects"}}
+        {{ $numberOfProjectPages := len $projectPages }}
+
+        {{ range $projectEntry_Index, $projectEntry :=  $projectPages}}
+            <!--
+                In the context of a range, the . refers to the current
+                element iterated over.
+
+                The mod function is a function from the Hugo
+                math library for templates.
+
+                            {{ $projectEntry_Index }}
+            {{ $projectEntry.Title }}
+            -->
+            {{ if eq (mod $projectEntry_Index 2) 0 }}
+                <div class="row mt-4">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $projectEntry.Title }}</h5>
+                                <p class="card-text">A short description.</p>
+                                <a href="#" class="btn btn-primary">Check it out</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{ if (lt $projectEntry_Index (sub $numberOfProjectPages 1)) }}
+                        {{ $immediateProjectEntry := (index $projectPages (add $projectEntry_Index 1)) }}
+
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"> {{ $immediateProjectEntry.Title }}</h5>
+                                    <p class="card-text">A short description.</p>
+                                    <a href="#" class="btn btn-primary">Check it out</a>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}            
         {{ end }}
-
-        <!--
-        <div class="row mt-4">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">My Project #1</h5>
-                        <p class="card-text">A short description.</p>
-                        <a href="#" class="btn btn-primary">Check it out</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">My Project #2</h5>
-                        <p class="card-text">A short description.</p>
-                        <a href="#" class="btn btn-primary">Check it out</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
