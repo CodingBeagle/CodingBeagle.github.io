@@ -1,0 +1,59 @@
+<!-- 
+    The DOCTYPE is a historical artifact that needs to be included for everything else to work right.
+-->
+<!DOCTYPE html>
+
+<!-- html tag wraps all content on the page. It's the root element. -->
+<html>
+    <!-- 
+        head is used to include things on your page that isn't content shown to viewers.
+
+        Such as: CSS styles, character set declarations, etc.
+    -->
+    <head>
+        <!-- charset specifies the character set for your document. In this caser, UTF-8. -->
+        <meta charset="utf-8">
+
+        <!-- 
+            Things such as the meta data description for your page can be used for Search Engine Optimization (SEO), as some meta data for your page has the potential
+            to make your page appear higher in relevant searches performed in search engines.
+         -->
+        <meta name="description" content="Coding Beagle is primarily a personal software engineering blog and portfolio containing projects,articles, knowledge sharing, tutorials, and other content related
+        to programming in various different languages and environments.">
+
+        <!-- title sets the title of the page, appearing in the browser tab when the page is loaded in. -->
+        <!-- TODO: Include zico logo! :D -->
+        <title>Coding Beagle!</title>
+
+        <!-- 
+            Add favicon (Favorites Icon).
+            It's usually used as the icon when you bookmark or favorite a website. However browsers also typically use it for the tab the website is open in.
+
+            the "link" tag specifies relationships between the current document and an external resource. Typically this would be stylesheets, but can also be things such as scripts or the favicon.
+            "rel" stands for "relationship", and is used to indicate the type of relationship the external resourc has to the document.
+        -->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- Link to stylesheets -->
+        <link rel="stylesheet" href="main.css">
+    </head>
+    
+    <!-- The body element contains all the content that displays on the page. -->
+    <body>
+        <div class="container">
+            <div></div>
+            <div class="content-body-grid">
+                <div class='site-logo'>
+                    <img class='site-logo-img' src='site-logo.png'>
+                </div>
+                <div class='social'>
+                </div>
+                <div class='menu'>
+                </div>
+                <div class='articles'>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </body>
+</html>
