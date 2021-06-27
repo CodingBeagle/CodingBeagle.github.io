@@ -60,15 +60,22 @@
                                 A table can be an easy way to list content like images next to each other, by styling the list items to be
                                 inline, with float: left
                             -->
-                            <ul>
-                                <li><img class='social-media-icon' src="/linkedin.svg"></li>
-                                <li><img class='social-media-icon' src="/github.svg"></li>
+                            <ul class='social-media-icon-list'>
+                                <!-- 
+                                    The 'a' tag is used to create hyperlinks to web pages. The destination is specified using the 'href' attribute. 
+                                    The 'target' attribute can be used to make the link open in (usually) a new tab, by using the '_blank' value.
+                                -->
+                                <li><a href="https://github.com/CodingBeagle" target="_blank"><img class='social-media-icon' src="/github.svg"></a></li>
+                                <li><a href="https://www.linkedin.com/in/kasper-rieder/" target="_blank"><img class='social-media-icon' src="/linkedin.svg"></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class='menu'>
-                    </div>
-                    <div class='articles'>
+                        <ul class='menu-list'>
+                            <li><a href="#">ARTICLES</a></li>
+                            <li><a href="#">PROJECTS</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class='site-articles'></div>

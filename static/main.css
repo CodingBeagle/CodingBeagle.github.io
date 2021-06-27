@@ -40,6 +40,7 @@ body {
 }
 
 .container {
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -51,9 +52,8 @@ body {
 .content-body-grid {
     grid-area: main;
     display: grid;
-    background-color: white;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.25fr 1.0fr;
+    grid-template-rows: 0.5fr 0.25fr 0.25fr;
     justify-items: center;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas */
     grid-template-areas:
@@ -105,14 +105,56 @@ body {
     width: 35px;
 }
 
-ul {
+.social-media-icon-list {
     padding: 0px;
 }
 
-li {
+/* For a 'ul' element with class social-media-icon-list, apply style to all child 'li' elements. */
+ul.social-media-icon-list li {
     display: inline;
     float: left;
     margin-left: 0.4em;
     margin-right: 0.4em;
     padding: 0px;
+}
+
+.menu-list {
+    padding: 0px;
+}
+
+ul.menu-list li {
+    display: inline;
+    float: left;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    padding: 0px;
+}
+
+ul.menu-list a {
+    font-family: 'Lora', serif;
+    display: inline;
+    font-size: 14px;
+    /* specify spacing between characters. */
+    letter-spacing: 1px;
+    color: #777777;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul.menu-list a {
+    /* Remove hyperlink underlining and other typical link styles */
+    text-decoration: none;
+    /* 
+        The transition property allows you to define the transition between two states of an element.
+        Different states can be defined using pseudo classes.
+    */
+    transition: color 0.25s;
+}
+
+/*
+    CSS pseudo classes are keywords added to a selector that specifies a specific state of the element.
+    'hover' is a pseudo class which is a state that happens when the mouse hovers over the element.
+*/
+ul.menu-list a:hover {
+    color: #f78769;
 }
