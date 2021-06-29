@@ -67,6 +67,44 @@ body {
     display: grid;
 }
 
+.article-entry {
+    display: block;
+}
+
+.article-entry-header {
+    text-align: center;
+    font-family: 'Lora', serif;
+    color: #777777;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.article-entry-meta {
+    text-align: center;
+    padding: 0px;
+}
+
+ul.article-entry-meta li {
+    font-size: 1.0em;
+    font-family: 'Lora', serif;
+    color: #bbbbbb;
+    text-align: center;
+    /* By setting list items to display by inline, the element becomes an inline element which do not generate line breaks before or after themselves. */
+    display: inline;
+    margin-right: 0.4em;
+}
+
+/*
+    :first-child is a PSEUDO CLASS representing the first child of a collection.
+    
+    ::after is a PSEUDO ELEMENT that represents the last child of a selected element. 
+    It's often used to add cosmetic content to an element with the content property.
+*/
+ul.article-entry-meta li:first-child::after {
+    content: "\00B7";
+    margin-left: .75em;
+}
+
 .site-logo {
     display: grid;
     align-items: center;
@@ -89,6 +127,12 @@ body {
 
 .menu {
     grid-area: menu;
+    border-color: #bbbbbb;
+    border-spacing: 2em;
+    border-top-style: dashed;
+    border-top-width: 0.1em;
+    border-bottom-style: dashed;
+    border-bottom-width: 0.1em;
 }
 
 .articles {
@@ -123,11 +167,17 @@ ul.social-media-icon-list li {
 }
 
 ul.menu-list li {
-    display: inline;
-    float: left;
+    /* 
+        Using a combination of display: inline-block with position: relative 
+        Seems to give the best result for getting list items centered vertically in a surrounding div.
+        Using float: left seems to offset them vertically. Not sure why...
+    */
+    display: inline-block;
+    position: relative;
     margin-left: 0.4em;
     margin-right: 0.4em;
     padding: 0px;
+    list-style: none;
 }
 
 ul.menu-list a {
