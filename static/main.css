@@ -43,7 +43,16 @@ body {
     background-color: white;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* 
+        Using 'auto' for the rows means that the height of the rows will at max be whatever the
+        size of the largest element is.
+
+        Doing this, I avoid that articles / blog posts stretching out the height of the grid overall has any effect on the scaling
+        of things in the header area.
+
+        TODO: Note to self, perhaps I actually went a bit overboard with using grids for the header / menu area? It might have been totally fine with stacked block elements.
+    */
+    grid-template-rows: auto auto;
     grid-template-areas:
     'main'
     'articles'
@@ -53,7 +62,7 @@ body {
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.25fr 0.25fr;
+    grid-template-rows: auto auto auto;
     justify-items: center;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas */
     grid-template-areas:
@@ -71,7 +80,7 @@ body {
     display: block;
     margin-left: 10%;
     margin-right: 10%;
-    border-color: #f3f3f3;
+    border-color: #bbbbbb;
     border-bottom-style: solid;
     border-bottom-width: 0.1em;
 }
