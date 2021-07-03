@@ -1,3 +1,7 @@
+<!--
+    The "baseof.html" file acts like the base template for the entire Hugo website.
+-->
+
 <!-- 
     The DOCTYPE is a historical artifact that needs to be included for everything else to work right.
 -->
@@ -35,7 +39,7 @@
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
         <!-- Link to stylesheets -->
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}main.css">
 
         <!-- Load Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,10 +54,10 @@
             <div class="container">
                 <div class="content-body-grid">
                     <div class='site-logo'>
-                        <img class='site-logo-img' src='site-logo.png'>
+                        <img class='site-logo-img' src='{{ .Site.BaseURL }}site-logo.png'>
                     </div>
                     <div class='social'>
-                        <h1 class='page-title'>{{.Title}}</h1>
+                        <h1 class='page-title'>{{.Site.Title}}</h1>
                         <h2 class='page-subtitle'>Paws to the keyboard!</h2>
                         <div class='social-media-container'>
                             <!-- 
@@ -72,32 +76,16 @@
                     </div>
                     <div class='menu'>
                         <ul class='menu-list'>
-                            <li><a href="#">ARTICLES</a></li>
+                            <li><a href="{{ .Site.BaseURL }}">ARTICLES</a></li>
                             <li><a href="#">SOFTWARE</a></li>
                             <li><a href="#">DRAWINGS</a></li>
                             <li><a href="#">ABOUT</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class='site-articles'>
-                    {{ range where .Pages "Section" "articles" }}
-                    {{ range .Pages }}
-                    <div class='article-entry'>
-                        <h1 class='article-entry-header'>{{ .Title }}</h1>
-                        <ul class='article-entry-meta'>
-                            <li>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</li>
-
-                            <!-- .Params is used to access user-defined Front Matter properties -->
-                            <li>{{ .Params.Author }}</li>
-                        </ul>
-                        <div>
-                            <p class='article-entry-summary'>{{ .Summary }}</p>
-                        </div>
-                    </div>
+                <div>
+                    {{ block "main" . }}
                     {{ end }}
-                    {{ end }}
-                    <!--
-                    -->
                 </div>
             </div>
             <div></div>

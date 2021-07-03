@@ -112,7 +112,8 @@ h1.article-entry-header::after {
 
 .article-entry-summary {
     font-family: 'Lora', serif;
-    color: #555555;
+    color: #777777;
+    font-weight: lighter;
 }
 
 .article-entry-meta {
@@ -243,12 +244,4 @@ ul.menu-list a {
 */
 ul.menu-list a:hover {
     color: #f78769;
-}
-
-.article-content {
-    font-family: 'Lora', serif;
-    font-size: 16px;
-    padding-left: 15%;
-    padding-right: 15%;
-    color: #555555;
 }
