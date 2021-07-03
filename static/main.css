@@ -69,6 +69,11 @@ body {
 
 .article-entry {
     display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-color: #f3f3f3;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1em;
 }
 
 .article-entry-header {
@@ -76,6 +81,21 @@ body {
     font-family: 'Lora', serif;
     color: #777777;
     font-style: italic;
+    font-weight: lighter;
+}
+
+h1.article-entry-header::after {
+    display: block;
+    content: "";
+    width: 25%;
+    height: 2px;
+    margin: 0.5em auto;
+    background-color: #f3f3f3;
+}
+
+.article-entry-summary {
+    font-family: 'Lora', serif;
+    color: #777777;
     font-weight: lighter;
 }
 
