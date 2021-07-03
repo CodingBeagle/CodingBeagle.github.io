@@ -23,7 +23,7 @@
 
         <!-- title sets the title of the page, appearing in the browser tab when the page is loaded in. -->
         <!-- TODO: Include zico logo! :D -->
-        <title>Coding Beagle!</title>
+        <title>{{.Title}}</title>
 
         <!-- 
             Add favicon (Favorites Icon).
@@ -53,7 +53,7 @@
                         <img class='site-logo-img' src='site-logo.png'>
                     </div>
                     <div class='social'>
-                        <h1 class='page-title'>Coding Beagle</h1>
+                        <h1 class='page-title'>{{.Title}}</h1>
                         <h2 class='page-subtitle'>Paws to the keyboard!</h2>
                         <div class='social-media-container'>
                             <!-- 
@@ -80,16 +80,24 @@
                     </div>
                 </div>
                 <div class='site-articles'>
+                    {{ range where .Pages "Section" "articles" }}
+                    {{ range .Pages }}
                     <div class='article-entry'>
-                        <h1 class='article-entry-header'>Test Header</h1>
+                        <h1 class='article-entry-header'>{{ .Title }}</h1>
                         <ul class='article-entry-meta'>
-                            <li>date</li>
-                            <li>author</li>
+                            <li>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</li>
+
+                            <!-- .Params is used to access user-defined Front Matter properties -->
+                            <li>{{ .Params.Author }}</li>
                         </ul>
                         <div>
-                            <p class='article-entry-summary'>Summary of article...</p>
+                            <p class='article-entry-summary'>{{ .Summary }}</p>
                         </div>
                     </div>
+                    {{ end }}
+                    {{ end }}
+                    <!--
+                    -->
                 </div>
             </div>
             <div></div>
