@@ -7,4 +7,5 @@ title = "Coding Beagle"
 summaryLength = 20
 
 [permalinks]
-    articles = "/:year/:month/:title/"
+    articles = "articles/:year/:month/:title/"
+    portfolio = "portfolio/:year/:month/:title/"
