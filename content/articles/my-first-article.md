@@ -1,7 +1,6 @@
 ---
 title: "My First Post"
 author: "Coding Beagle"
-type: "article"
 draft: false
 ---
 
