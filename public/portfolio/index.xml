@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolio on Coding Beagle</title>
+    <link>//codingbeagle.com/portfolio/</link>
+    <description>Recent content in Portfolio on Coding Beagle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Jul 2021 14:17:56 +0200</lastBuildDate><atom:link href="//codingbeagle.com/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project 1</title>
+      <link>//codingbeagle.com/portfolio/2021/07/project-1/</link>
+      <pubDate>Sat, 03 Jul 2021 14:17:56 +0200</pubDate>
+      
+      <guid>//codingbeagle.com/portfolio/2021/07/project-1/</guid>
+      <description>This is an awesome Project 1!</description>
+    </item>
+    
+    <item>
+      <title>Project 2</title>
+      <link>//codingbeagle.com/portfolio/1/01/project-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//codingbeagle.com/portfolio/1/01/project-2/</guid>
+      <description>This is an awesome Project 2!</description>
+    </item>
+    
+  </channel>
+</rss>
