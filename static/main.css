@@ -112,6 +112,8 @@ h1.article-entry-header::after {
 
 .article-entry-summary {
     font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: lighter;
     color: #555555;
 }
 
@@ -245,12 +247,20 @@ ul.menu-list a:hover {
     color: #f78769;
 }
 
+.article-link {
+    text-decoration: none;
+}
+
 .article-content {
     font-family: 'Lora', serif;
     font-size: 16px;
     padding-left: 15%;
     padding-right: 15%;
     color: #555555;
+}
+
+.article-content a {
+    text-decoration: underline;
 }
 
 .portfolio-intro p {
@@ -264,6 +274,7 @@ ul.menu-list a:hover {
 .portfolio-grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 60% 1fr;
+    margin-top: 10px;
 }
 
 .portfolio-grid {
@@ -285,6 +296,8 @@ ul.menu-list a:hover {
         https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block
     */
     position: relative;
+    border: 1px dotted #777777;
+    border-radius: 5px;
 }
 
 .portfolio-entry-title {

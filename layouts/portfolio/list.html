@@ -13,7 +13,7 @@
                 <div class="portfolio-entry-title">
                     <h2>{{ .Title }}</h2>
                 </div>
-                <img class="site-logo-img" src="{{ .Site.BaseURL }}portfolio-thumbs/test.png">
+                <img class="site-logo-img" src="{{ .Site.BaseURL }}portfolio-thumbs/{{ .Params.thumbnail }}.png">
             </div>
         </a>
     {{ end }}

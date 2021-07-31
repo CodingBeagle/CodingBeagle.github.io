@@ -1,18 +1,20 @@
 {{ define "main" }}
 {{ range where .Pages "Section" "articles" }}
 {{ range .Pages }}
-<div class='article-entry'>
-    <h1 class='article-entry-header'><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-    <ul class='article-entry-meta'>
-        <li>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</li>
+<a class="article-link" href="{{ .Permalink }}">
+    <div class='article-entry'>
+        <h1 class='article-entry-header'>{{ .Title }}</h1>
+        <ul class='article-entry-meta'>
+            <li>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</li>
 
-        <!-- .Params is used to access user-defined Front Matter properties -->
-        <li>{{ .Params.Author }}</li>
-    </ul>
-    <div>
-        <p class='article-entry-summary'>{{ .Summary }}</p>
+            <!-- .Params is used to access user-defined Front Matter properties -->
+            <li>{{ .Params.Author }}</li>
+        </ul>
+        <div>
+            <p class='article-entry-summary'>{{ .Summary }} ...<span style="text-decoration: underline;">Continue Reading</span></p>
+        </div>
     </div>
-</div>
+</a>
 {{ end }}
 {{ end }}
 {{ end }}
