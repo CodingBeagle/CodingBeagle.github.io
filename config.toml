@@ -1,5 +1,5 @@
 # It is considered best practice not to define the protocol of your baseURL in the Hugo config file.
-baseURL = "//codingbeagle.github.io/"
+baseURL = "//codingbeagle.com/"
 languageCode = "en-us"
 title = "Coding Beagle"
 # summaryLength is used to customize the amount of words that should be used for the
