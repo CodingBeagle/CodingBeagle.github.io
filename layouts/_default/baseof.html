@@ -18,6 +18,23 @@
         <!-- charset specifies the character set for your document. In this caser, UTF-8. -->
         <meta charset="utf-8">
 
+        <!-- 
+            The viewport of the browser is the area of the browser window in which web content can be seen.
+
+            Narrow screen devices (like mobiles) typically render pages in a VIRTUAL viewport which is wider than the physical screen.
+            The rendered result is then shrunk down so it can all be seen at once.
+
+            This is done as a work-around to generally make websites that are not optimized for mobile look better on a narrow screen.
+
+            However, this can cause issues for sites that are actually optimized for mobile using media queries. If you have breakpoints like 640px for certain devices,
+            these will not actually break on the mobile device due to the virtual viewports.
+
+            mobile-optimized sites will usually contain the following line.
+
+            The "width" property controls the size of the viewport. The special value "device-width" is the width of the device's screen in CSS pixels at a scale of 100%.
+
+            initial-scale controls the zoom level when the page is first loaded.
+        -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- 
