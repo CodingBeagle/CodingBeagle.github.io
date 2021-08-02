@@ -32,13 +32,6 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
-@media (max-width: 800px) {
-    .super-container {
-        margin-top: 0px;
-        grid-template-columns: 1fr 16fr 1fr;
-    }
-}
-
 .container {
     background-color: white;
     display: grid;
@@ -257,6 +250,19 @@ ul.menu-list a:hover {
     padding-left: 15%;
     padding-right: 15%;
     color: #555555;
+}
+
+@media (max-width: 800px) {
+    .super-container {
+        margin-top: 0px;
+        grid-template-columns: 1fr 16fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .article-content {
+        padding: 0px;
+    }
 }
 
 .article-content a {
