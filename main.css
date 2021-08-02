@@ -252,17 +252,22 @@ ul.menu-list a:hover {
     color: #555555;
 }
 
-@media (max-width: 800px) {
-    .super-container {
-        margin-top: 0px;
-        grid-template-columns: 1fr 16fr 1fr;
-    }
-}
+/*
+    Media queries are used to modify your website depending on a device's general type (like screen resolution or browser viewport width).
 
-@media screen and (max-width: 800px) {
-    .article-content {
-        padding: 0px;
-    }
+    A media query computes to true when the media type matches the device on which a document is being displayed, and ALL media feature
+    expressions compute as true.
+*/
+@media screen and 
+    (max-width: 812px) {
+        .super-container {
+            margin-top: 0px;
+            grid-template-columns: 1fr 16fr 1fr;
+        }
+
+        .article-content {
+            padding: 0px;
+        }
 }
 
 .article-content a {
